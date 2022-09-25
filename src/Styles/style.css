@@ -1,0 +1,116 @@
+:root{
+    --clr-primary:#9F414B;
+    --clr-background:#F4EFE5;
+    --clr-white:#f2f2f2;
+    --font-family:'Quicksand', sans-serif;
+    --fs-body: 16px;
+    --fs-subtitle: 18px;
+    --fs-title:22px;
+    --fs-contact-app-title: 36px;
+    --fw-bold:700;
+    --fw-semibold:600;
+    --fw-regular:400;
+}
+
+*, *::before *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    background: var(--clr-background);
+}
+
+.contact-app{
+    width: 768px;
+    margin: auto;
+}
+
+.contact-app h1{
+    text-align: center;
+    font-size: var(--fs-contact-app-title);
+    font-weight: var(--fw-bold);
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact-item{
+    display: flex;
+    column-gap: 40px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-left: 5px solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -ms-transition: all .15s linear;
+    -o-transition: all .15s linear;
+}
+
+.contact-item:hover{
+    border-left: 5px solid var(--clr-primary);
+    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+    -moz-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    -o-transform: translateX(10px);
+}
+
+.contact-item__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+}
+
+.contact-item__title{
+    margin: 0;
+}
+
+.contact-item__username{
+    margin: 0;
+}
+
+.contact-item__image{
+    position: relative;
+}
+
+.contact-item__image::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    height: 60%;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.contact-item__image img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
