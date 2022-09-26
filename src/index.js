@@ -5,12 +5,16 @@ import ContactApp from "./Components/ContactApp";
 
 // CSS
 import "./Styles/style.css"
+import MyForm from './ControlledComponents/MyForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <div className='content-wrapper'>
+    {/* <MyForm /> */}
     <ContactApp />
-  </React.StrictMode>
+  </div>
+    // <React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
